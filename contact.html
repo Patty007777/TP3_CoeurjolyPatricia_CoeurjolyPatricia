@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inspiration Cœurjoly - Créations artisanales sur mesure au Québec. Enseignes LED, tapis personnalisés, impression 3D, gravure laser.">
+  <title>Inspiration Cœurjoly - Créations artisanales au Québec</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <!-- ================= HEADER ============ -->
+
+  <header class="navbar navbar-dark bg-black sticky-top shadow" role="banner">
+    <div class="container py-2">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html" aria-label="Retour à l'accueil">
+        <div class="site-header__logo-circle">
+          <img src="img/logo.png" alt="Logo papillon Inspiration Cœurjoly">
+        </div>
+        <span class="fw-bold fs-5 text-white">Inspiration Coeurjoly</span>
+      </a>
+
+      <nav role="navigation" aria-label="Navigation principale">
+        <ul class="nav gap-4 list-unstyled mb-0">
+          <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="#apropos">À propos</a></li>
+          <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="#creations">Nos créations</a></li>
+          <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="#promos">Promotions</a></li>
+          <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="contact.html">Contact</a></li>
+          <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========SÉPARATION DE SECTION ============ -->
+
+<div class="d-flex align-items-center gap-3 container my-5">
+  <span class="separator__line"></span>
+  <span class="separator__badge">
+    <img src="img/logo.png" alt="" width="36" height="36">
+  </span>
+  <span class="separator__line"></span>
+</div>
+<main>
+
+  <!-- ============== FORMULAIRE ================== -->
+
+  <section class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <form id="contactForm" class="row g-4" novalidate>
+          <div class="col-md-6">
+            <label for="name" class="form-label">
+              Votre nom complet <span class="text-danger">*</span>
+            </label>
+            <input type="text" 
+                   class="form-control" 
+                   id="name" 
+                   placeholder="Ex: Marie Tremblay" 
+                   required>
+            <div class="invalid-feedback">
+              Merci d'indiquer votre nom.
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <label for="email" class="form-label">
+              Adresse courriel <span class="text-danger">*</span>
+            </label>
+            <input type="email" 
+                   class="form-control" 
+                   id="email" 
+                   placeholder="Ex: marie@example.com" 
+                   required>
+            <div class="invalid-feedback">
+              Veuillez fournir une adresse courriel valide.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <label for="subject" class="form-label">
+              Sujet <span class="text-danger">*</span>
+            </label>
+            <input type="text" 
+                   class="form-control" 
+                   id="subject" 
+                   placeholder="Ex: Enseigne LED pour mon commerce" 
+                   required>
+            <div class="invalid-feedback">
+              Un sujet nous aide à mieux comprendre votre besoin.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <label for="message" class="form-label">
+              Décrivez votre projet <span class="text-danger">*</span>
+            </label>
+            <textarea id="message" 
+                      class="form-control" 
+                      rows="6" 
+                      placeholder="Dimensions, matériaux, budget, délais..." 
+                      required></textarea>
+            <div class="invalid-feedback">
+              Plus vous nous donnez de détails, mieux nous pourrons vous conseiller.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="custom" checked>
+              <label class="form-check-label" for="custom">
+                Je souhaite une création 100% personnalisée
+              </label>
+            </div>
+            
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="newsletter">
+              <label class="form-check-label" for="newsletter">
+                J'accepte de recevoir l'infolettre
+              </label>
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <button class="btn btn-dark btn-lg px-5" type="submit">
+              Envoyer ma demande
+            </button>
+            <p class="text-muted small mt-3 mb-0">
+              <strong>Réponse rapide garantie:</strong> Nous répondons dans les 48 heures.
+            </p>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="d-flex align-items-center gap-3 container my-5">
+    <span class="separator__line"></span>
+    <span class="separator__badge">
+      <img src="img/logo.png" alt="" width="36" height="36">
+    </span>
+    <span class="separator__line"></span>
+  </div>
+
+  <!--======== RÉALISATIONS ===============-->
+
+<section class="container py-4">
+  <h2 class="display-6 fw-bold text-center mb-3">Inspirez-vous de nos réalisations</h2>
+  <p class="text-center text-muted mb-5">
+    Découvrez le processus créatif derrière nos projets populaires.
+  </p>
+  
+  <div class="row g-4">
+    <div class="col-md-4">
+      <article class="card h-100 border-0 shadow-sm">
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/tvKjIY--Uf4?rel=0&modestbranding=1" 
+            title="De l'esquisse au néon"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3 class="h5 fw-bold">De l'esquisse au néon</h3>
+          <p class="text-muted">
+            Suivez toutes les étapes de création d'une enseigne LED personnalisée.
+          </p>
+          <a href="construction.html" class="text-decoration-none fw-semibold">
+            Lire l'article →
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-4">
+      <article class="card h-100 border-0 shadow-sm">
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/LmmaE2wNgeg?rel=0&modestbranding=1" 
+            title="Tapis tufté sur mesure"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3 class="h5 fw-bold">Tapis tufté sur mesure</h3>
+          <p class="text-muted">
+            Les secrets d'un tapis durable: fibres, techniques et entretien.
+          </p>
+          <a href="construction.html" class="text-decoration-none fw-semibold">
+            Lire l'article →
+          </a>
+        </div>
+      </article>
+    </div>
+    
+    <div class="col-md-4">
+      <article class="card h-100 border-0 shadow-sm">
+        <div class="video-container">
+          <iframe 
+            src="https://www.youtube.com/embed/IIFObFHkHcg?rel=0&modestbranding=1" 
+            title="Impression 3D utile"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3 class="h5 fw-bold">Impression 3D utile</h3>
+          <p class="text-muted">
+            Comment l'impression 3D résout des problèmes quotidiens.
+          </p>
+          <a href="construction.html" class="text-decoration-none fw-semibold">
+            Lire l'article →
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="container py-4">
+</main>
+
+  <!-- ======= FOOTER ======= -->
+
+  <footer class="site-footer mt-5">
+    <div class="bg-black py-4">
+      <div class="container d-flex align-items-center justify-content-center gap-5 flex-wrap">
+        <div class="site-footer__logo">
+          <a href="#top" aria-label="Remonter en haut de la page" class="d-flex align-items-center justify-content-center">
+            <div class="site-footer__logo-circle d-flex align-items-center justify-content-center">
+              <img src="img/logo.png" alt="Logo Inspiration Coeurjoly">
+            </div>
+          </a>
+        </div>
+
+        <nav aria-label="Navigation du pied de page">
+          <ul class="nav gap-4 list-unstyled mb-0">
+            <li><a href="#apropos" class="nav-link text-white fw-semibold position-relative">À propos</a></li>
+            <li><a href="#creations" class="nav-link text-white fw-semibold position-relative">Nos créations</a></li>
+            <li><a href="#promos" class="nav-link text-white fw-semibold position-relative">Promotions</a></li>
+            <li><a href="contact.html" class="nav-link text-white fw-semibold position-relative">Contact</a></li>
+            <li><a href="faq.html" class="nav-link text-white fw-semibold position-relative">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="site-footer__divider" aria-hidden="true"></div>
+
+    <div class="site-footer__copyright bg-dark py-3">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <p class="mb-0 small text-light">© 2025 Inspiration Coeurjoly - Tous droits réservés</p>
+        <p class="mb-0 small text-light fst-italic">Créations artisanales québécoises</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+
