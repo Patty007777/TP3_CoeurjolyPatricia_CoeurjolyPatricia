@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function afficherHero() {
   const elements = document.querySelectorAll('.js-appear');
   
@@ -37,3 +38,17 @@ document.addEventListener('DOMContentLoaded', initialiser);
 window.addEventListener('error', function(e) {
   console.error('Erreur détectée:', e.message);
 });
+=======
+// PAGE FAQ
+
+function retournerCarte() {
+  this.classList.toggle('is-flipped');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const flipCards = document.querySelectorAll('.flip-card');
+  flipCards.forEach(carte => {
+    carte.addEventListener('click', retournerCarte);
+  });
+});
+>>>>>>> faq
