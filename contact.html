@@ -34,6 +34,118 @@
     </div>
   </header>
 
+  <!-- =========SÉPARATION DE SECTION ============ -->
+
+<div class="d-flex align-items-center gap-3 container my-5">
+  <span class="separator__line"></span>
+  <span class="separator__badge">
+    <img src="img/logo.png" alt="" width="36" height="36">
+  </span>
+  <span class="separator__line"></span>
+</div>
+<main>
+
+  <!-- ============== FORMULAIRE ================== -->
+
+  <section class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <form id="contactForm" class="row g-4" novalidate>
+          <div class="col-md-6">
+            <label for="name" class="form-label">
+              Votre nom complet <span class="text-danger">*</span>
+            </label>
+            <input type="text" 
+                   class="form-control" 
+                   id="name" 
+                   placeholder="Ex: Marie Tremblay" 
+                   required>
+            <div class="invalid-feedback">
+              Merci d'indiquer votre nom.
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <label for="email" class="form-label">
+              Adresse courriel <span class="text-danger">*</span>
+            </label>
+            <input type="email" 
+                   class="form-control" 
+                   id="email" 
+                   placeholder="Ex: marie@example.com" 
+                   required>
+            <div class="invalid-feedback">
+              Veuillez fournir une adresse courriel valide.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <label for="subject" class="form-label">
+              Sujet <span class="text-danger">*</span>
+            </label>
+            <input type="text" 
+                   class="form-control" 
+                   id="subject" 
+                   placeholder="Ex: Enseigne LED pour mon commerce" 
+                   required>
+            <div class="invalid-feedback">
+              Un sujet nous aide à mieux comprendre votre besoin.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <label for="message" class="form-label">
+              Décrivez votre projet <span class="text-danger">*</span>
+            </label>
+            <textarea id="message" 
+                      class="form-control" 
+                      rows="6" 
+                      placeholder="Dimensions, matériaux, budget, délais..." 
+                      required></textarea>
+            <div class="invalid-feedback">
+              Plus vous nous donnez de détails, mieux nous pourrons vous conseiller.
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="custom" checked>
+              <label class="form-check-label" for="custom">
+                Je souhaite une création 100% personnalisée
+              </label>
+            </div>
+            
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="newsletter">
+              <label class="form-check-label" for="newsletter">
+                J'accepte de recevoir l'infolettre
+              </label>
+            </div>
+          </div>
+          
+          <div class="col-12">
+            <button class="btn btn-dark btn-lg px-5" type="submit">
+              Envoyer ma demande
+            </button>
+            <p class="text-muted small mt-3 mb-0">
+              <strong>Réponse rapide garantie:</strong> Nous répondons dans les 48 heures.
+            </p>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </section>
+
+  <div class="d-flex align-items-center gap-3 container my-5">
+    <span class="separator__line"></span>
+    <span class="separator__badge">
+      <img src="img/logo.png" alt="" width="36" height="36">
+    </span>
+    <span class="separator__line"></span>
+  </div>
+
 
   <!-- ======= FOOTER ======= -->
 
