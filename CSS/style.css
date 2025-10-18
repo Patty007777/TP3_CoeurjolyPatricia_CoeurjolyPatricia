@@ -1,1 +1,38 @@
-/*============ SITE INSPIRATION COEURJOLY ==============*/
+/*=========== PAGE CONSTRUCTION ===========*/
+
+.construction-hero {
+  background: linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  min-height: 500px;
+}
+
+.construction-services {
+  background: #f8f9fa;
+}
+
+.construction-services__card {
+  border: 3px solid var(--bleu-marine);
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.construction-services__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.construction-services__icon {
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.construction-services__card--portfolio {
+  border-color: #0d6efd;
+}
+
+.construction-services__card--faq {
+  border-color: #198754;
+}
+
+.construction-services__card--contact {
+  border-color: #dc3545;
+}
