@@ -38,6 +38,8 @@
   display: block;
 }
 
+/* =========== SECTION ACCORDÉON QUESTION  =========== */
+
 .faq-question {
   background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
   color: white;
@@ -62,6 +64,8 @@
   border: 3px solid var(--bleu-marine);
   border-top: none;
 }
+
+/* ========= SECTION TÉMOIGNAGES =========== */
 
 .flip-card {
   perspective: 1000px;
