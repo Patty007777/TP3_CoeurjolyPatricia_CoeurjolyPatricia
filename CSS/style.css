@@ -424,7 +424,6 @@ html {
 .hero-faq {
    background: url("../img/fond-bleu-degrade.png") center/cover,
               linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
-  min-height: 500px;
 }
 
 .faq-icon {
