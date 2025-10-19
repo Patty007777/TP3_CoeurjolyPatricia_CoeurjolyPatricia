@@ -154,7 +154,7 @@ function init() {
     lien.addEventListener('click', defilerVersSection);
   });
   
-  const cartes = document.querySelectorAll('.card, .creation-card, .promo-card');
+  const cartes = document.querySelectorAll(' .creation-card, .promo-card');
   cartes.forEach(carte => {
     carte.addEventListener('mouseenter', survolerCarte);
     carte.addEventListener('mouseleave', quitterCarte);

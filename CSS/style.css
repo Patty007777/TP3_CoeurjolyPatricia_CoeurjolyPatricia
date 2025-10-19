@@ -565,29 +565,6 @@ letter-spacing: 4px;
   min-height: auto;
 }
 
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  background: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-@media (max-width: 576px) {
-  .video-container {
-    padding-bottom: 75%;
-  }
-}
 
 /*====== SECTION FORMULAIRE ========*/
 
@@ -747,6 +724,70 @@ letter-spacing: 4px;
 #contactForm .form-check-input:focus {
   border-color: var(--bleu-moyen);
   box-shadow: 0 0 0 3px rgba(15, 39, 72, 0.1);
+}
+
+/*======= SECTION VIDÉO ==========*/
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-card {
+  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 39, 72, 0.15);
+}
+.video-card .card-body {
+  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
+  padding: 20px;
+}
+.video-card .card-body h3 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.video-card .card-body p {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 20px;
+}
+.video-card__link {
+  display: inline-block;
+  background: white;
+  color: var(--bleu-marine);
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.video-card__link:hover {
+  background: #f0f0f0;
+  color: var(--bleu-marine);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.video-card__link::after {
+  content: '→';
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 /*======= FIN PAGE CONTACT =====*/
