@@ -17,6 +17,12 @@ html {
   --bleu-moyen: #153d6f;
 }
 
+#apropos,
+#creations,
+#promos {
+  scroll-margin-top: 120px;
+}
+
 /* ========== HEADER ========== */
 
 .site-header__logo-circle {
@@ -29,7 +35,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s ease;
 }
+
+.site-header__logo-circle:hover {
+  animation: tourner 2s linear infinite;
+}
+
 
 .site-header__logo-circle img {
   width: 120px;
@@ -373,19 +385,23 @@ html {
 
 .js-appear {
   opacity: 0;
-  transform: translateY(20px);
 }
 
 .js-appear.is-visible {
-  animation: apparaitre 0.6s forwards;
+  animation: apparaitre  2s ease-out forwards;
 }
 
 @keyframes apparaitre {
-  to {
+  0% {
+    opacity: 0;
+    }
+  50% {
+    opacity: 0.5;
+    }
+  100% {
     opacity: 1;
-    transform: translateY(0);
   }
-}
+ }
 
 /*=========== FIN PAGE INDEX =========*/
 

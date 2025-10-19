@@ -6,7 +6,7 @@ function afficherHero() {
   elements.forEach((element, index) => {
     setTimeout(() => {
       element.classList.add('is-visible');
-    }, index * 200);
+    }, index * 500);
   });
 }
 
@@ -18,10 +18,19 @@ function defilerVersSection(e) {
     
     if (section) {
       e.preventDefault();
-      section.scrollIntoView({ behavior: 'smooth' });
+
+      const headerHeight = 100;
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+       window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   }
 }
+
 
 function survolerCarte() {
   this.style.transform = 'translateY(-6px)';
