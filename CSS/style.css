@@ -228,8 +228,22 @@ html {
   object-fit: contain;
 }
 
+/*========= SECTION NOS DERNIÈRES CRÉATIONS =========*/
+
 .creation-card {
   background: linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  overflow: hidden;
+}
+.creation-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.creation-card:hover .card-img-top {
+  transform: scale(1.15);
+}
+
+.creation-card:hover {
+  transform: none !important;
 }
 
 /* ============= SECTION PROMOTIONS ============= */
