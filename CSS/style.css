@@ -673,13 +673,76 @@ html {
   color: #b8c1cc;
 }
 
+/* ===== FIN PAGE CONSTRUCTION ========*/
 
+/*=========== PAGE CONFIRMATION ===========*/
 
+.confirmation-message {
+  background: url("../img/fond-bleu-degrade.png") center/cover,
+  linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  color: white !important;
+  min-height: 400px;
+}
 
+.confirmation-message {
+  background: url("../img/fond-bleu-degrade.png") center/cover,
+              linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  color: white !important;
+  min-height: 400px;
+}
 
+.confirmation-message * {
+  color: white !important;
+}
 
+.confirmation-message .text-success {
+  color: #4ade80 !important;
+}
 
+.confirmation-btn {
+  position: relative;
+  display: inline-block;
+  background: white;
+  border: 4px solid white;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
 
+.confirmation-btn::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid var(--bleu-marine);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.confirmation-btn:hover::before {
+  opacity: 1;
+}
+
+.confirmation-btn-inner {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background: black;
+  color: white;
+  padding: 14px 32px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.confirmation-btn:hover .confirmation-btn-inner {
+  color: white;
+}
 
 .confirmation-btn-corner {
   position: absolute;
@@ -749,60 +812,106 @@ html {
   color: white;
 }
 
+/*======== SECTION CRÉATIONS POPULAIRES ===========*/
 
-
-
-
-
-
-/*============ PAGE CONFIRMATION ==============*/
-
-.hero {
-  background: url("../img/fond-bleu-degrade.png") center/cover,
-              linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
-  min-height: 500px;
+.creation-showcase-card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  cursor: pointer;
 }
 
+.creation-showcase-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
 
-.hero__cta {
-.confirmation-message * {
+.creation-showcase-card__img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+}
+
+.creation-showcase-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.creation-showcase-card:hover .creation-showcase-card__img {
+  transform: scale(1.15);
+}
+
+.creation-showcase-card__body {
+  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
+  padding: 20px;
+  text-align: center;
+}
+
+.creation-showcase-card__title {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.creation-showcase-card__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/*=========== SECTION INFOLETTRE ==========*/
+
+.newsletter-section {
+  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
   color: white;
 }
 
-.confirmation-message .text-success {
-  color: #4ade80;
+.newsletter-section * {
+  color: white !important;
 }
 
-.confirmation-btn {
+.newsletter-section .text-muted {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.newsletter-section .form-control {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.newsletter-section .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-section .form-control:focus {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.newsletter-btn {
   position: relative;
   display: inline-block;
   background: white;
-  border: 4px solid white;
-  padding: 22px 26px;
+  border: 3px solid white;
+  padding: 12px 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
+  height: 100%;
 }
 
-.hero__cta::before {
+.newsletter-btn::before {
   content: '';
   position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  padding: 20px 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.confirmation-btn::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
   border: 2px solid var(--bleu-marine);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -810,192 +919,88 @@ html {
   z-index: 1;
 }
 
-.hero__cta:hover::before {
+.newsletter-btn:hover::before {
   opacity: 1;
 }
 
-.hero__cta-btn {
-.confirmation-btn:hover::before {
-  opacity: 1;
-}
-
-.confirmation-btn-inner {
+.newsletter-btn-inner {
   position: relative;
   z-index: 2;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: black;
-  color: white;
-  padding: 16px 36px;
-  padding: 14px 32px;
+  color: white !important;
+  padding: 11px 32px;
   font-weight: 800;
-  text-decoration: none;
+  border: none;
   transition: color 0.2s;
+  height: 100%;
+  white-space: nowrap;
 }
 
-.hero__cta-btn:hover {
-  color: white;
+.newsletter-btn:hover .newsletter-btn-inner {
+  color: white !important;
 }
 
-.hero__cta-corner {
+.newsletter-btn-corner {
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 42px;
+  height: 42px;
   pointer-events: none;
 }
 
-.hero__cta-corner::before {
+.newsletter-btn-corner::before {
   content: "";
   position: absolute;
   background: var(--bleu-marine);
-  height: 5px;
-  width: 52px;
+  height: 3px;
+  width: 32px;
 }
 
-.hero__cta-corner::after {
+.newsletter-btn-corner::after {
   content: "";
   position: absolute;
   background: var(--bleu-marine);
-  width: 5px;
-  height: 52px;
+  width: 3px;
+  height: 32px;
 }
 
-.hero__cta-corner--tr {
-  top: 8px;
-  right: 8px;
+.newsletter-btn-corner--tr {
+  top: 4px;
+  right: 4px;
 }
 
-.hero__cta-corner--tr::before {
+.newsletter-btn-corner--tr::before {
   top: 0;
   right: 0;
 }
 
-.hero__cta-corner--tr::after {
+.newsletter-btn-corner--tr::after {
   top: 0;
   right: 0;
 }
 
-.hero__cta-corner--bl {
-  bottom: 8px;
-  left: 8px;
+.newsletter-btn-corner--bl {
+  bottom: 4px;
+  left: 4px;
 }
 
-.hero__cta-corner--bl::before {
+.newsletter-btn-corner--bl::before {
   bottom: 0;
   left: 0;
 }
 
-.hero__cta-corner--bl::after {
+.newsletter-btn-corner--bl::after {
   bottom: 0;
   left: 0;
 }
 
-
-/* ======== SECTION CRÉATIONS ========== */
-
-.creation-card {
-  background: linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+.newsletter-section .row.g-3 {
+  align-items: center;
 }
 
-.creation-card__cta {
-  position: relative;
-  display: inline-block;
-  background: white;
-  border: 4px solid white;
-  padding: 22px 26px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-.creation-card__cta::before {
-  content: '';
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  right: 12px;
-  bottom: 12px;
-  border: 2px solid var(--bleu-marine);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.creation-card__cta:hover::before {
-  opacity: 1;
-}
-
-.creation-card__cta-btn {
-  position: relative;
-  z-index: 2;
-  display: block;
-  background: black;
-  color: white;
-  padding: 16px 36px;
-  font-weight: 800;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.creation-card__cta-btn:hover {
-  color: white;
-}
-
-.creation-card__cta-corner {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  pointer-events: none;
-}
-
-.creation-card__cta-corner::before {
-  content: "";
-  position: absolute;
-  background: var(--bleu-marine);
-  height: 5px;
-  width: 52px;
-}
-
-.creation-card__cta-corner::after {
-  content: "";
-  position: absolute;
-  background: var(--bleu-marine);
-  width: 5px;
-  height: 52px;
-}
-
-.creation-card__cta-corner--tr {
-  top: 8px;
-  right: 8px;
-}
-
-.creation-card__cta-corner--tr::before {
-  top: 0;
-  right: 0;
-}
-
-.creation-card__cta-corner--tr::after {
-  top: 0;
-  right: 0;
-}
-
-.creation-card__cta-corner--bl {
-  bottom: 8px;
-  left: 8px;
-}
-
-.creation-card__cta-corner--bl::before {
-  bottom: 0;
-  left: 0;
-}
-
-.creation-card__cta-corner--bl::after {
-  bottom: 0;
-  left: 0;
-}
-
-
-
-
+/*======= FIN PAGE CONFIRMATION ========*/
 
 /* ===== RESPONSIVE ========== */
 
@@ -1060,75 +1065,7 @@ html {
 
 
 
-/*======== SECTION CRÉATIONS POPULAIRES ===========*/
 
-.creation-showcase-card {
-  border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.creation-showcase-card:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-}
-
-.creation-showcase-card__img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-}
-
-.creation-showcase-card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.creation-showcase-card:hover .creation-showcase-card__img {
-  transform: scale(1.15);
-}
-
-.creation-showcase-card__body {
-  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
-  padding: 20px;
-  text-align: center;
-}
-
-.creation-showcase-card__title {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.creation-showcase-card__text {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.9rem;
-  margin-bottom: 0;
-}
-
-/*=========== SECTION INFOLETTRE ==========*/
-
-.newsletter-section {
-  background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
-  color: white;
-}
-
-.flip-card__back {
-  transform: rotateY(180deg);
-}
-
-.flip-card__photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
 
 @media (max-width: 576px) {
   .faq-icon {
