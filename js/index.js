@@ -1,10 +1,8 @@
+// FONCTIONS DE BASE DE TOUTES LES PAGES
+  
 function afficherHero() {
   const elements = document.querySelectorAll('.js-appear');
   
-// PAGE CONFIRMATION
-
-function afficherHero() {
-  const elements = document.querySelectorAll('.js-appear');
   elements.forEach((element, index) => {
     setTimeout(() => {
       element.classList.add('is-visible');
@@ -20,86 +18,22 @@ function defilerVersSection(e) {
     
     if (section) {
       e.preventDefault();
-      const offset = 100;
-      const sectionTop = section.offsetTop - offset;
-      window.scrollTo({ top: sectionTop, behavior: 'smooth' });
-// PAGE CONSTRUCTION 
-
-function cliquerCarteConstruction() {
-  const card = this;
-  
-  card.style.animation = 'none';
-  setTimeout(() => {
-    card.style.animation = '';
-  }, 10);
-  
-  const titre = card.querySelector('h3').textContent;
-  console.log('Service sélectionné:', titre);
-}
-
-function doublerCliquerCard() {
-  const lien = this.querySelector('.hero__cta-btn');
-  if (lien) {
-    window.location.href = lien.getAttribute('href');
-  }
-}
-
-function activerCardClavier(e) {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    const lien = this.querySelector('.hero__cta-btn');
-    if (lien) {
-      lien.click();
-  if (lien.startsWith('#') && lien.length > 1) {
-    const section = document.querySelector(lien);
-    if (section) {
-      e.preventDefault();
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }
 
-function initialiser() {
-function validerInfolettreEtRediriger(e) {
-  e.preventDefault();
-  const form = this;
-  if (form.checkValidity()) {
-    window.location.href = 'confirmation.html';
-  } else {
-    form.querySelector('input[type="email"]').classList.add('is-invalid');
-  }
+function survolerCarte() {
+  this.style.transform = 'translateY(-6px)';
+  this.style.transition = 'transform 0.3s';
 }
 
-function init() {
-  afficherHero();
-  
-  const liens = document.querySelectorAll('a[href^="#"]');
-  liens.forEach(lien => {
-    lien.addEventListener('click', defilerVersSection);
-  });
+function quitterCarte() {
+  this.style.transform = '';
 }
 
-document.addEventListener('DOMContentLoaded', initialiser);
-
-window.addEventListener('error', function(e) {
-  console.error('Erreur détectée:', e.message);
-});
-
-// PAGE FAQ
-
-function retournerCarte() {
-  this.classList.toggle('is-flipped');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  const flipCards = document.querySelectorAll('.flip-card');
-  flipCards.forEach(carte => {
-    carte.addEventListener('click', retournerCarte);
-  });
-});
-
-// PAGE CONTACT 
-
+// FONCTIONS SPÉCIFIQUES POUR LE FORMULAIRE DE CONTACT
+   
 function validerChamp() {
   if (this.checkValidity()) {
     this.classList.remove('is-invalid');
@@ -147,7 +81,44 @@ function initialiserFormulaire() {
   form.addEventListener('submit', soumettreFormulaire);
 }
 
-document.addEventListener('DOMContentLoaded', initialiserFormulaire);
+//   FONCTION SPÉCIFIQUE  POUR LA PAGE FAQ
+   
+
+function retournerCarte() {
+  this.classList.toggle('is-flipped');
+}
+
+// FONCTIONS SPÉCIFIQUES POUR LA PAGE CONSTRUCTION
+   
+function cliquerCarteConstruction() {
+  const card = this;
+  
+  card.style.animation = 'none';
+  setTimeout(() => {
+    card.style.animation = '';
+  }, 10);
+  
+  const titre = card.querySelector('h3').textContent;
+  console.log('Service sélectionné:', titre);
+}
+
+function doublerCliquerCard() {
+  const lien = this.querySelector('.hero__cta-btn');
+  if (lien) {
+    window.location.href = lien.getAttribute('href');
+  }
+}
+
+function activerCardClavier(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    const lien = this.querySelector('.hero__cta-btn');
+    if (lien) {
+      lien.click();
+    }
+  }
+}
+
 function initialiserConstruction() {
   const cards = document.querySelectorAll('.construction-services__card');
   
@@ -163,12 +134,31 @@ function initialiserConstruction() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', initialiserConstruction);
+// DÉMARRAGE DES FONCTIONNALITÉS
+   
+
+function init() {
+  afficherHero();
   
-  const formNewsletter = document.querySelector('.newsletter-section form');
-  if (formNewsletter) {
-    formNewsletter.addEventListener('submit', validerInfolettreEtRediriger);
-  }
+  const liens = document.querySelectorAll('a[href^="#"]');
+  liens.forEach(lien => {
+    lien.addEventListener('click', defilerVersSection);
+  });
+  
+  const cartes = document.querySelectorAll('.card, .creation-card, .promo-card');
+  cartes.forEach(carte => {
+    carte.addEventListener('mouseenter', survolerCarte);
+    carte.addEventListener('mouseleave', quitterCarte);
+  });
+  
+  initialiserFormulaire();
+  
+  const flipCards = document.querySelectorAll('.flip-card');
+  flipCards.forEach(carte => {
+    carte.addEventListener('click', retournerCarte);
+  });
+  
+  initialiserConstruction();
 }
 
 document.addEventListener('DOMContentLoaded', init);
@@ -176,4 +166,3 @@ document.addEventListener('DOMContentLoaded', init);
 window.addEventListener('error', function(e) {
   console.error('Erreur:', e.message);
 });
-
