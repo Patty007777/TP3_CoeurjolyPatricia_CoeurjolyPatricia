@@ -540,6 +540,21 @@ html {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+.testimonial-stars {
+ color:hsl(64, 100%, 51%);
+ font-size: 2.2rem;
+ background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
+ padding: 10px 20px;
+ border-radius: 8px;
+ display: inline-block;
+ text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+letter-spacing: 4px;
+}
+
 /*========= FIN PAGE FAQ =========*/
 
 /*=========== DÉBUT PAGE CONTACT ===========*/
