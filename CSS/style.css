@@ -558,6 +558,13 @@ letter-spacing: 4px;
 
 /*=========== DÉBUT PAGE CONTACT ===========*/
 
+
+.hero {
+  background: url("../img/fond-bleu-degrade.png") center/cover,
+  linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  min-height: auto;
+}
+
 .video-container {
   position: relative;
   width: 100%;
@@ -581,6 +588,8 @@ letter-spacing: 4px;
     padding-bottom: 75%;
   }
 }
+
+
 
 /*======= FIN PAGE CONTACT =====*/
 
