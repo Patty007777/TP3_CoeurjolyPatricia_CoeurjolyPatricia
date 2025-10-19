@@ -301,9 +301,91 @@ html {
   filter: brightness(0) invert(1);
 }
 
+/* =============== FOOTER ===================== */
+
+.site-footer__logo-circle {
+  background: white;
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  border: 2px solid black;
+  box-shadow: 0 0 0 6px white, 0 0 0 14px black;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-footer__logo-circle:hover {
+  animation: tourner 2s linear infinite;
+}
+
+@keyframes tourner {
+  to { transform: rotate(360deg); }
+}
+
+.site-footer__logo-circle img {
+  width: 140px;
+  height: 84px;
+  object-fit: contain;
+  filter: invert(1) brightness(0);
+}
+
+.site-footer .nav-link {
+  position: relative;
+  font-size: 1rem;
+}
+
+.site-footer .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0d6efd;
+  transition: width 0.3s;
+}
+
+.site-footer .nav-link:hover::after {
+  width: 100%;
+}
+
+.site-footer__divider {
+  background: white;
+  position: relative;
+  padding: 8px 0;
+}
+
+.site-footer__divider::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: black;
+  transform: translateY(-50%);
+}
 
 
+/* ========== ANIMATIONS ============== */
 
+.js-appear {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.js-appear.is-visible {
+  animation: apparaitre 0.6s forwards;
+}
+
+@keyframes apparaitre {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
@@ -546,90 +628,8 @@ html {
 }
 
 
-/* =============== FOOTER ===================== */
 
-.site-footer__logo-circle {
-  background: white;
-  border-radius: 50%;
-  width: 88px;
-  height: 88px;
-  border: 2px solid black;
-  box-shadow: 0 0 0 6px white, 0 0 0 14px black;
-  transition: transform 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.site-footer__logo-circle:hover {
-  animation: tourner 2s linear infinite;
-}
-
-@keyframes tourner {
-  to { transform: rotate(360deg); }
-}
-
-.site-footer__logo-circle img {
-  width: 140px;
-  height: 84px;
-  object-fit: contain;
-  filter: invert(1) brightness(0);
-}
-
-.site-footer .nav-link {
-  position: relative;
-  font-size: 1rem;
-}
-
-.site-footer .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #0d6efd;
-  transition: width 0.3s;
-}
-
-.site-footer .nav-link:hover::after {
-  width: 100%;
-}
-
-.site-footer__divider {
-  background: white;
-  position: relative;
-  padding: 8px 0;
-}
-
-.site-footer__divider::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  background: black;
-  transform: translateY(-50%);
-}
-
-/* ========== ANIMATIONS ============== */
-
-.js-appear {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.js-appear.is-visible {
-  animation: apparaitre 0.6s forwards;
-}
-
-@keyframes apparaitre {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* ===== RESPONSIVE ========== */
 
