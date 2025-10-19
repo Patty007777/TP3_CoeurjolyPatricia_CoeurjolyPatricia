@@ -1,8 +1,3 @@
-
-
-/*============ SITE INSPIRATION COEURJOLY ==============*/
-
-
 /* ========== BONNES PRATIQUE  ============ */
 
 * {
@@ -21,8 +16,6 @@ html {
   --bleu-fonce: #0e2a4d;
   --bleu-moyen: #153d6f;
 }
-
-
 
 /* ========== HEADER ========== */
 
@@ -65,10 +58,170 @@ html {
   width: 100%;
 }
 
-/* ======= SECTION HERO ========== */
+/* ======= SECTION HERO PAGE INDEX========== */
 
 .hero {
-  background: url("../img/fond%20bleu%20d%C3%A9grad%C3%A9.png") center/cover,
+  background: url("../img/fond-bleu-degrade.png") center/cover,
+  linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+  min-height: 500px;
+}
+
+.hero__cta,
+.creation-card__cta,
+.promo-card__cta {
+  position: relative;
+  display: inline-block;
+  background: white;
+  border: 4px solid white;
+  padding: 22px 26px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.hero__cta::before,
+.creation-card__cta::before,
+.promo-card__cta::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 2px solid var(--bleu-marine);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__cta:hover::before,
+.creation-card__cta:hover::before,
+.promo-card__cta:hover::before {
+  opacity: 1;
+}
+
+.hero__cta-btn,
+.creation-card__cta-btn,
+.promo-card__cta-btn {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background: black;
+  color: white;
+  padding: 16px 36px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hero__cta-btn:hover,
+.creation-card__cta-btn:hover,
+.promo-card__cta-btn:hover {
+  color: white;
+}
+
+.hero__cta-corner,
+.creation-card__cta-corner,
+.promo-card__cta-corner {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+}
+
+.hero__cta-corner::before,
+.creation-card__cta-corner::before,
+.promo-card__cta-corner::before {
+  content: "";
+  position: absolute;
+  background: var(--bleu-marine);
+  height: 5px;
+  width: 52px;
+}
+
+.hero__cta-corner::after,
+.creation-card__cta-corner::after,
+.promo-card__cta-corner::after {
+  content: "";
+  position: absolute;
+  background: var(--bleu-marine);
+  width: 5px;
+  height: 52px;
+}
+
+.hero__cta-corner--tr,
+.creation-card__cta-corner--tr,
+.promo-card__cta-corner--tr {
+  top: 8px;
+  right: 8px;
+}
+
+.hero__cta-corner--tr::before,
+.creation-card__cta-corner--tr::before,
+.promo-card__cta-corner--tr::before {
+  top: 0;
+  right: 0;
+}
+
+.hero__cta-corner--tr::after,
+.creation-card__cta-corner--tr::after,
+.promo-card__cta-corner--tr::after {
+  top: 0;
+  right: 0;
+}
+
+.hero__cta-corner--bl,
+.creation-card__cta-corner--bl,
+.promo-card__cta-corner--bl {
+  bottom: 8px;
+  left: 8px;
+}
+
+.hero__cta-corner--bl::before,
+.creation-card__cta-corner--bl::before,
+.promo-card__cta-corner--bl::before {
+  bottom: 0;
+  left: 0;
+}
+
+.hero__cta-corner--bl::after,
+.creation-card__cta-corner--bl::after,
+.promo-card__cta-corner--bl::after {
+  bottom: 0;
+  left: 0;
+}
+
+.separator__line {
+  flex: 1;
+  height: 2px;
+  background: var(--bleu-marine);
+}
+
+.separator__badge {
+  width: 52px;
+  height: 52px;
+  border: 3px solid var(--bleu-marine);
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator__badge img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.creation-card {
+  background: linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
+}
+
+
+
+
+
 /*============ PAGE CONFIRMATION ==============*/
 
 .hero {
@@ -76,6 +229,7 @@ html {
               linear-gradient(180deg, var(--bleu-fonce), var(--bleu-moyen));
   min-height: 500px;
 }
+
 
 .hero__cta {
 .confirmation-message * {
