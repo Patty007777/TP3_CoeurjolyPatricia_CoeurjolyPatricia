@@ -512,8 +512,33 @@ html {
 
 /*========= FIN PAGE FAQ =========*/
 
+/*=========== DÉBUT PAGE CONTACT ===========*/
 
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+}
 
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .video-container {
+    padding-bottom: 75%;
+  }
+}
+
+/*======= FIN PAGE CONTACT =====*/
 
 
 
@@ -991,31 +1016,7 @@ html {
 
 /*============ SITE INSPIRATION COEURJOLY ==============*/
 
-/*=========== PAGE CONTACT ===========*/
 
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  background: #000;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-@media (max-width: 576px) {
-  .video-container {
-    padding-bottom: 75%;
-  }
-}
 
 
 /*=========== PAGE CONSTRUCTION ===========*/
