@@ -361,6 +361,15 @@ html {
   transform: none !important;
 }
 
+#apropos .card {
+  transition: all 0.3s ease;
+}
+
+#apropos .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* ============= SECTION PROMOTIONS ============= */
 
 .promo-card__overlay {
@@ -720,7 +729,6 @@ letter-spacing: 4px;
 
 
 /*====== SECTION FORMULAIRE ========*/
-
 
 #contactForm .form-control {
   border: 2px solid var(--bleu-marine);
