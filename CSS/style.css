@@ -1428,11 +1428,49 @@ letter-spacing: 4px;
     height: 60px;
   }
   
-  #promoCarousel { margin: 0; }
-  .carousel-control-prev { left: 10px; }
-  .carousel-control-next { right: 10px; }
+ 
+  #promoCarousel .carousel-control-prev,
+  #promoCarousel .carousel-control-next {
+    display: none !important;
+  }
+
+  #promoCarousel {
+    margin: 0 !important;
+  }
+
+  #promoCarousel .carousel-inner {
+    display: flex !important;
+    flex-direction: column;
+  }
   
-  .faq-icon {
+  #promoCarousel .carousel-item {
+    display: block !important;
+    opacity: 1 !important;
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  
+#promoCarousel .carousel-item .row {
+    flex-direction: column;
+  }
+  
+  #promoCarousel .carousel-item .col-md-4,
+  #promoCarousel .carousel-item .col-12 {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #promoCarousel .carousel-item .col-md-4:last-child,
+  #promoCarousel .carousel-item .col-12:last-child {
+    padding-bottom: 0 !important;
+  }
+
+ .faq-icon {
     width: 85px;
     height: 85px;
   }
@@ -1475,7 +1513,7 @@ letter-spacing: 4px;
   .contact-form__btn-corner::after {
     height: 32px;
   }
-}
+
 
   .construction-hero {
     min-height: 400px;
@@ -1525,6 +1563,8 @@ letter-spacing: 4px;
     height: 26px;
     width: 3px;
   }
+
+}
 
 
 @media (max-width: 768px) {
