@@ -66,7 +66,9 @@ html {
   transition: width 0.3s;
 }
 
-.site-header__nav-link:hover::after {
+.site-header__nav-link:hover::after,
+.site-header__nav-link:focus::after,
+.site-header__nav-link:active::after{
   width: 100%;
 }
 
@@ -141,6 +143,15 @@ html {
     padding: 18px 0;
     display: block;
     font-size: 1.1rem;
+  }
+
+  .site-header__nav-link:active::after {
+    width: 100%;
+    transition: width 0s !important;
+  }
+
+  .site-header__logo-circle:active {
+    animation: tourner 2s linear infinite;
   }
 
   .site-header__overlay {
@@ -477,7 +488,9 @@ html {
   transition: width 0.3s;
 }
 
-.site-footer .nav-link:hover::after {
+.site-footer .nav-link:hover::after,
+.site-footer .nav-link:focus::after,
+.site-footer .nav-link:active::after {
   width: 100%;
 }
 
@@ -498,6 +511,35 @@ html {
   transform: translateY(-50%);
 }
 
+/* ====== RESPONSIVE ======*/
+
+@media (max-width: 767px) {
+  .site-footer .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1rem;
+  }
+  
+  .site-footer .nav li:nth-child(1),
+  .site-footer .nav li:nth-child(2),
+  .site-footer .nav li:nth-child(3),
+  .site-footer .nav li:nth-child(4),
+  .site-footer .nav li:nth-child(5) {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+
+.site-footer .nav-link:active::after {
+    width: 100%;
+    transition: width 0s !important;
+ }
+
+ .site-footer__logo-circle:active {
+    animation: tourner 2s linear infinite;
+ }
+
+}
 
 /* ========== ANIMATIONS ============== */
 
