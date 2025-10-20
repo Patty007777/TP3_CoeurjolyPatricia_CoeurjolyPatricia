@@ -493,13 +493,20 @@ html {
   perspective: 1000px;
   height: 350px;
   cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+  filter: drop-shadow(0 0 0 transparent);  
+}
+
+.flip-card:hover {
+  transform: translateY(-12px);
+  filter: drop-shadow(0 12px 30px rgba(36, 96, 238, 0.45));  
 }
 
 .flip-card__inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.7s ease-in-out;
   transform-style: preserve-3d;
 }
 
@@ -520,7 +527,6 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .flip-card__front {
@@ -530,6 +536,7 @@ html {
 
 .flip-card__back {
   transform: rotateY(180deg);
+  background: white;
 }
 
 .flip-card__photo {
@@ -538,7 +545,7 @@ html {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(36, 96, 238, 0.4);
 }
 
 .testimonial-stars {
