@@ -1071,6 +1071,7 @@ letter-spacing: 4px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .creation-showcase-card:hover {
@@ -1080,7 +1081,7 @@ letter-spacing: 4px;
 .creation-showcase-card__img-wrapper {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 320px !important;
   overflow: hidden;
 }
 
@@ -1092,12 +1093,12 @@ letter-spacing: 4px;
 }
 
 .creation-showcase-card:hover .creation-showcase-card__img {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 .creation-showcase-card__body {
   background: linear-gradient(135deg, var(--bleu-marine), var(--bleu-moyen));
-  padding: 20px;
+  padding: 22px;
   text-align: center;
 }
 
@@ -1105,13 +1106,14 @@ letter-spacing: 4px;
   color: white;
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .creation-showcase-card__text {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   margin-bottom: 0;
+  line-height: 1.4;
 }
 
 /*=========== SECTION INFOLETTRE ==========*/
