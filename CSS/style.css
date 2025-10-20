@@ -1541,12 +1541,14 @@ letter-spacing: 4px;
   }
   
   .newsletter-btn {
-    padding: 10px 12px;
+    padding: 8px 10px;
+    width: 100%;
   }
   
   .newsletter-btn-inner {
-    padding: 8px 20px;
+    padding: 12px 24px;
     font-size: 0.95rem;
+    width: 100%;
   }
   
   .newsletter-btn-corner {
@@ -1597,5 +1599,180 @@ letter-spacing: 4px;
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  
+  .creation-card__cta-btn,
+  .hero__cta-btn {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    white-space: normal;
+    line-height: 1.2;  
+  }
+  
+  .creation-card__cta,
+  .hero__cta {
+    padding: 12px 14px;
+  }
+  
+  .creation-card__cta-corner,
+  .hero__cta-corner {
+    width: 46px;
+    height: 46px;
+  }
+  
+  .creation-card__cta-corner::before,
+  .hero__cta-corner::before {
+    width: 36px;
+  }
+  
+  .creation-card__cta-corner::after,
+  .hero__cta-corner::after {
+    height: 36px;
+  }
+}
+
+@media (max-width: 820px) {
+  #promoCarousel { margin: 0 60px; }
+  .carousel-control-prev { left: -50px; }
+  .carousel-control-next { right: -50px; }
+}
+
+@media (max-width: 767px) and (min-width: 577px) {
+     #promoCarousel .carousel-control-prev,
+  #promoCarousel .carousel-control-next {
+    display: none !important;
+  }
+
+  #promoCarousel {
+    margin: 0 !important;
+  }
+
+  #promoCarousel .carousel-inner {
+    display: flex !important;
+    flex-direction: column;
+  }
+  
+  #promoCarousel .carousel-item {
+    display: block !important;
+    opacity: 1 !important;
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    margin-bottom: 0 !important;
+  }
+#promoCarousel .carousel-item .row {
+    flex-direction: column;
+  }
+  
+  #promoCarousel .carousel-item .col-md-4,
+  #promoCarousel .carousel-item .col-12 {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    padding-bottom: 1.5rem !important;
+  }
+
+  #promoCarousel .carousel-item:last-child .col-md-4:last-child,
+  #promoCarousel .carousel-item:last-child .col-12:last-child {
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+    .video-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .video-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .video-card .card-body h3 {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .video-card .card-body p {
+    flex-grow: 1;
+    min-height: 72px;
+  }
+
+  .video-card__link {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .construction-services .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .construction-services .col-lg-4:nth-child(1) {
+    flex: 0 0 100%;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  .construction-services .col-lg-4:nth-child(2),
+  .construction-services .col-lg-4:nth-child(3) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .construction-services__card {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 577px) {
+  .creation-showcase-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .creation-showcase-card__img-wrapper {
+    height: 280px;
+    flex-shrink: 0;
+  }
+
+  .creation-showcase-card__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 140px;
+  }
+
+  .creation-showcase-card__title {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .creation-showcase-card__text {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .creation-showcase-card__img-wrapper {
+    height: 220px;
   }
 }
