@@ -22,7 +22,21 @@
         <span class="fw-bold fs-5 text-white">Inspiration Coeurjoly</span>
       </a>
 
-      <nav aria-label="Navigation principale">
+<!-- =============== MENU BURGER ===========-->
+
+     <button class="navbar-toggler site-header__burger" 
+            type="button" 
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="navbarMenu">
+      <span class="site-header__burger-line"></span>
+      <span class="site-header__burger-line"></span>
+      <span class="site-header__burger-line"></span>
+    </button>
+
+      <nav id="navbarMenu" 
+         class="site-header__nav"
+         aria-label="Navigation principale">
         <ul class="nav gap-4 list-unstyled mb-0">
           <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="#apropos">À propos</a></li>
           <li><a class="nav-link text-white fw-semibold site-header__nav-link" href="#creations">Nos créations</a></li>

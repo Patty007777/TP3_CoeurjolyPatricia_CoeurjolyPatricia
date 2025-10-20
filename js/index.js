@@ -27,10 +27,11 @@ function defilerVersSection(e) {
         top: offsetPosition,
         behavior: 'smooth'
       });
+
+     fermerMenuMobile();
     }
   }
 }
-
 
 function survolerCarte() {
   this.style.transform = 'translateY(-6px)';
@@ -39,6 +40,76 @@ function survolerCarte() {
 
 function quitterCarte() {
   this.style.transform = '';
+}
+
+// FONCTION MENU BURGER
+
+function togglerMenuMobile() {
+  const burger = document.querySelector('.site-header__burger');
+  const nav = document.querySelector('.site-header__nav');
+  const overlay = document.querySelector('.site-header__overlay');
+
+  burger.classList.toggle('is-active');
+  nav.classList.toggle('is-open');
+
+if (overlay) {
+    overlay.classList.toggle('is-visible');
+  }
+
+   const isExpanded = burger.classList.contains('is-active');
+  burger.setAttribute('aria-expanded', isExpanded);
+
+  if (isExpanded) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+}
+
+function fermerMenuMobile() {
+  const burger = document.querySelector('.site-header__burger');
+  const nav = document.querySelector('.site-header__nav');
+  const overlay = document.querySelector('.site-header__overlay');
+  
+  if (burger && burger.classList.contains('is-active')) {
+    burger.classList.remove('is-active');
+    nav.classList.remove('is-open');
+    if (overlay) {
+      overlay.classList.remove('is-visible');
+    }
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+}
+
+function initialiserMenuMobile() {
+  const burger = document.querySelector('.site-header__burger');
+  
+  if (!burger) return;
+
+if (!document.querySelector('.site-header__overlay')) {
+    const overlay = document.createElement('div');
+    overlay.className = 'site-header__overlay';
+    document.body.appendChild(overlay);
+
+ overlay.addEventListener('click', fermerMenuMobile);
+  }
+ burger.addEventListener('click', togglerMenuMobile);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      fermerMenuMobile();
+    }
+  });
+let resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (window.innerWidth >= 768) {
+        fermerMenuMobile();
+      }
+    }, 250);
+  });
 }
 
 // FONCTIONS SPÉCIFIQUES POUR LE FORMULAIRE DE CONTACT
@@ -149,6 +220,8 @@ function initialiserConstruction() {
 function init() {
   afficherHero();
   
+   initialiserMenuMobile();
+   
   const liens = document.querySelectorAll('a[href^="#"]');
   liens.forEach(lien => {
     lien.addEventListener('click', defilerVersSection);
